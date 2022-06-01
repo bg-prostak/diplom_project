@@ -28,6 +28,13 @@ body{
     max-width: 1170px;
     margin: 0 auto;
 }
+.more-button{
+    background-color: $red-color;
+    padding: 15px;
+    font-size:20px;
+    border-radius: 10px;
+    color:$white-text-color;
+}
 
 /* ------------------------------------------------------------------------------------------*/
 /* ------------------------------------------------------------------------------------------main */
@@ -72,6 +79,201 @@ body{
             text-transform: uppercase;  
         }
           
+    }
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------start */
+.section-start{
+    transition: all 0.5s;
+    .section-start__container{
+        max-width: none;
+        .section-start__title{
+            display: flex;
+            align-items: center;
+            font-size: 60px;
+            width: 100%;
+            text-align: center;
+            height: 100px;
+            .title_left{
+                flex-basis: 50%;
+                height: 100%;
+                line-height: 100px;
+                text-align: end;
+                color: $red-text-color;
+                background-color: $white-color;
+                padding-right: 5px;
+            }
+            .title_right{
+                text-align: start;
+                flex-basis: 50%;
+                line-height: 100px;
+                height: 100%;
+                background-color: $red-color;
+                color: $white-text-color;
+                padding-left: 5px;
+            }
+        }
+        .section-start__content{
+            .content__parent{
+                min-height: 400px;
+                display: flex;
+                
+                .content__child_image{
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    opacity: 0.9;
+                   
+                }
+                .content__child{
+                    justify-content: space-between;
+                    background-color: $white-color;;
+                    color: $red-text-color;
+                    flex-basis: 50%;
+                }
+                .content__child_text-block{
+                    padding: 40px;
+                    display: flex;
+                    
+                    .text-block__text{
+                        flex-basis: 70%;
+                        
+                        h3{
+                            font-size: 50px;
+                            margin-bottom: 10px;
+                        }
+                        p{
+                            color: $black-text-color;
+                            font-size: 24px;
+                            line-height: 30px;
+                        }
+                    }
+                    .text-block__number-and-image{
+                        display: flex;
+                        flex-direction: column;
+                        flex-basis: 20%;
+                        align-items: flex-end;
+                        justify-content: space-between;
+                        .number-and-image__number{
+                        padding-top: 20px;
+                        display: flex;
+                        justify-content: flex-end;
+                        
+                        span{font-size: 150px;
+                        line-height: 30px;}
+                        }
+                        .number-and-image__image{
+                            img{
+                                width: 100%;
+                                height: auto; 
+                                max-width: 165px;  
+                            }
+                              
+                        }
+                      
+                    }
+                    
+                }
+                .content__child_image1{
+                    background-image: url(../img/pitanie.jpg);
+                    background-position: right bottom;
+                }
+                .content__child_image2{
+                    background-image: url(../img/tren.jpg);
+                }
+                .content__child_image3{
+                    background-image: url(../img/son.jpg);
+                }
+            }
+            .content__parent_reverse{
+                flex-direction: row-reverse;
+            }
+        }
+        
+        
+    }
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------food */
+.section-food{
+    background-color: $white-color;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    .section-food__container{
+        max-width: 90%;
+    }
+    &__title{
+        text-align: center;
+        h2{
+          color:$red-text-color;
+          font-size: 60px;  
+        }
+        margin-bottom: 50px;
+        
+    }
+    &__body{
+        color:$black-text-color;
+        display: flex;
+        justify-content: center;
+        
+        .body__left{
+            border-right: 2px solid black;
+            padding-right: 20px;
+            .content{
+                justify-content: space-between; 
+            }
+        }
+        .body__right{
+            border-left: 2px solid black;
+            padding-left: 20px;
+            .item__content{
+                flex-direction: row-reverse;
+            }
+        }
+        .body__item{
+            display: flex;
+            align-items: center;
+            flex-basis: 50%;
+            flex-direction: column;
+            .item__title{
+                h3{
+                font-size: 35px;
+                margin-bottom: 30px;
+                }
+            }
+            .item__content{
+                display: flex;
+                height: 100%;
+                .content__image{
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        max-height:350px;
+                        width: auto;
+                        
+                    } 
+                    flex-basis: 50%;
+                }
+               
+                .content__text-and-button{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    flex-basis: 50%;
+                    .text-and-button__text{
+                        p{
+                        line-height: 30px;
+                        font-size: 20px;
+                        margin-bottom: 50px;}
+                    }
+                    .text-and-button__button{
+                        align-self: center;
+                    }
+                    
+                }
+            }
+        }
+       
     }
 }
 /* ------------------------------------------------------------------------------------------ */
