@@ -1,4 +1,77 @@
+/* ------------------------------------------------------------------------------------------Import */
 @import "normalize.scss";
 @import "null.scss";
 @import "header.scss";
+@import "variables.scss";
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------Fonts */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------------Common */
+body{
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 500;
+    color:$white-text-color;   
+}
+.wrapper {
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.section-inner{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* ------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------main */
+.section-main{
+    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url(../img/main-bg.jpg) center no-repeat;
+    display: flex;
+    background-size: cover;
+    min-height: 100vh;
+    .section-inner{
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main__text{
+        font-size: 80px;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        span{
+            &:nth-child(2){
+                color: $red-text-color;
+            }
+        }
+        margin-bottom: 80px;
+    }
+    .main__button{
+        
+        a{
+            transition: all 0.5s;
+            text-align: center;
+            padding: 20px;
+            background-color: $white-color;
+            color: $black-text-color;
+            border-radius: 10px;
+            font-size: 50px;
+            font-weight: 700;
+            text-transform: uppercase;  
+        }
+          
+    }
+}
 /* ------------------------------------------------------------------------------------------ */
