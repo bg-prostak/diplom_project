@@ -277,3 +277,54 @@ body{
     }
 }
 /* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------trens*/
+.section-trens{
+    background-color: $black-color;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .section-trens__container{
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .section-trens__title{
+            h2{
+                color:$red-text-color;
+                font-size: 60px;  
+            }
+            margin-bottom: 50px;
+        }
+        .section-trens__text{
+
+            margin-bottom: 50px;
+        }
+        .section-trens__list{
+            display: flex;
+            gap:50px;
+            .list__item{
+                .item__image{
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                    img{
+                        width: 100%;
+                        height: auto;
+                        max-width: 500px;
+                    }
+                }
+                .item__title{
+                    font-size: 30px;
+                    margin-bottom: 20px;
+                }
+                .item__text{
+                    font-size: 20px;
+
+                }
+            }
+           
+        }
+
+    }
+}/* ------------------------------------------------------------------------------------------ */
+
+
