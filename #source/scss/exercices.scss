@@ -1,0 +1,296 @@
+/* ------------------------------------------------------------------------------------------Import */
+@import "normalize.scss";
+@import "null.scss";
+@import "header.scss";
+@import "variables.scss";
+@import "common.scss";
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------main */
+.section-header{z-index: 1;}
+.section-main{
+    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url(../img/exercices/main-bg.jpg) center no-repeat;
+    filter: grayscale(100%);
+    display: flex;
+    background-size: cover;
+    min-height: 100vh;
+    .section-inner{
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-main__text{
+        font-size: 80px;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        span{
+            &:nth-child(2){
+                color: $red-text-color;
+            }
+        }
+        margin-bottom: 80px;
+    }
+    .section-main__button{
+        
+        a{
+            transition: all 0.5s;
+            text-align: center;
+            padding: 20px;
+            background-color: $white-color;
+            color: $black-text-color;
+            border-radius: 10px;
+            font-size: 50px;
+            font-weight: 700;
+            text-transform: uppercase;  
+        }
+          
+    }
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------exercices */
+.section-exercices{
+    padding: 200px 10px;
+    background-color:$black-color;
+    &__list{
+        display: flex;
+        flex-direction: column; 
+        .list__group{
+            position: relative;
+            margin-bottom: 25px;
+            .group__item__button{
+                padding: 0;
+                border: none;
+                font: inherit;
+                color: inherit;
+                background-color: transparent;
+                width: 100%;
+                cursor: pointer;
+            }
+            .group__item{
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                display: flex;
+                height: 200px;            
+                filter: grayscale(100%);
+                background-repeat: no-repeat;
+                background-position: center center;
+                border-radius: 30px;
+                box-shadow: 10px 5px 5px black;
+               
+                h2{
+                    font-size: 70px;
+                }
+                &:hover{
+                    filter: none;
+                }
+                &.active{
+                    filter: none;
+                }
+                &-1{
+                    background-image:url(../img/exercices/chest-bg.jpg);
+                    background-position: center -342px;
+                }
+                &-2{
+                    background-image:url(../img/exercices/back-bg.jpeg);
+                    background-size: 100%;
+                    background-position: center 70%;
+                }
+                &-3{
+                    background-image:url(../img/exercices/shoulders-bg.jpeg);
+                    background-position: center 40%;
+                    background-size: 100%;
+                }
+                &-4{
+                    background-image:url(../img/exercices/biceps-bg.jpg);
+                    background-size: 100%;
+                }
+                &-5{
+                    background-image:url(../img/exercices/triceps-bg.jpg);
+                    background-size: 130%;
+                }
+                &-6{
+                    background-image:url(../img/exercices/chest-bg.jpg);
+                    background-position: center 60%;
+                    background-size: 160%;
+                }
+                &-7{
+                    background-image:url(../img/exercices/legs-bg.jpg);
+                    background-size: cover;
+                    background-position: center 40%;
+                }
+
+            }
+            
+            .list__upr{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: stretch;
+                justify-content: center;
+                max-height: 0px;
+                overflow: hidden;
+                padding-top: 25px;
+                gap:20px;
+                flex-wrap: wrap;
+                
+                transition: max-height 0.4s ease-out;
+                .upr__item{
+                    background-color: $white-color;
+                    flex-basis: 30%;
+                    border-radius: 20px;
+                    .item__link{
+                        height: 100%;
+                        width: 100%;
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .item__image{
+                        img{
+                        width: 100%;
+                        height: auto;
+                        }
+                    }
+                    .item__text{
+
+                    }
+                    .item__title{
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-end;
+                            text-align: center;
+                            color: $black-text-color;
+                            font-size: 40px;
+                            flex: 1 1 auto;  
+                            margin-bottom: 10px;
+                        
+                    }
+                }
+            }
+            .list__upr.active{
+              transition: max-height 0.4s ease-out;
+            }
+        }
+    }
+}
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 100;
+    
+}
+.popup.open{
+    opacity: 1;
+    visibility:visible;
+    
+}
+.popup.open .popup__content {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+    
+}
+.popup__area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+}
+.popup__body{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    transition: all 0.4s ease 0s;
+}
+.popup__content{
+    background-color: #fff;
+    color: #000000;
+    max-width: 70%;
+    padding: 30px;
+    position: relative;
+    transition: all 0.4s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    border: 1px solid black;
+    .popup__title{
+        font-size: 50px;
+        font-family: $font2;
+        margin-bottom: 20px;
+    }
+    .popup__image{
+        img{
+            width: 100%;
+        }
+    }
+    .popup__text{
+        font-size: 20px;
+        font-weight: 400;    
+        h3{
+            font-size: 30px;
+        }
+        p{
+
+        } 
+        span{
+                font-weight: bold;
+                margin-bottom: 10px;
+                display: block;
+            }
+        a{
+            margin: 20px 0;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            color: #0000FF;
+            &:hover{ 
+                text-decoration: underline; 
+            }
+        }
+        ul{
+            li{
+               list-style: square; 
+               margin-bottom: 10px;
+               margin-left: 10px;
+            }
+            
+        }
+        iframe{
+            width:100%;
+            height:400px;
+        }
+    }
+    
+}
+#chest-1{
+    span{
+        margin-bottom: 0;
+    }
+}
+.popup__close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: #000000;
+}
+body.lock{
+    overflow: hidden;
+}
+
+
+

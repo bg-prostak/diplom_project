@@ -3,43 +3,12 @@
 @import "null.scss";
 @import "header.scss";
 @import "variables.scss";
+@import "common.scss";
 /* ------------------------------------------------------------------------------------------ */
 
-/* ------------------------------------------------------------------------------------------Fonts */
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
-/* ------------------------------------------------------------------------------------------ */
-
-
-/* ------------------------------------------------------------------------------------------Common */
-body{
-    font-family: 'Oswald';
-    font-style: normal;
-    font-weight: 500;
-    color:$white-text-color;   
-}
-.wrapper {
-    overflow: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-.section-inner{
-    max-width: 1170px;
-    margin: 0 auto;
-}
-.more-button{
-    background-color: $red-color;
-    padding: 15px;
-    font-size:20px;
-    border-radius: 10px;
-    color:$white-text-color;
-}
-
-/* ------------------------------------------------------------------------------------------*/
 /* ------------------------------------------------------------------------------------------main */
 .section-main{
-    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url(../img/main-bg.jpg) center no-repeat;
+    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url(../img/main/main-bg.jpg) center no-repeat;
     display: flex;
     background-size: cover;
     min-height: 100vh;
@@ -175,14 +144,14 @@ body{
                     
                 }
                 .content__child_image1{
-                    background-image: url(../img/pitanie.jpg);
+                    background-image: url(../img/main/pitanie.jpg);
                     background-position: right bottom;
                 }
                 .content__child_image2{
-                    background-image: url(../img/tren.jpg);
+                    background-image: url(../img/main/tren.jpg);
                 }
                 .content__child_image3{
-                    background-image: url(../img/son.jpg);
+                    background-image: url(../img/main/son.jpg);
                 }
             }
             .content__parent_reverse{

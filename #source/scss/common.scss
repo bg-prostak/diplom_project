@@ -1,0 +1,28 @@
+// common styles
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import "variables.scss";
+body{
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 500;
+    color:$white-text-color;   
+}
+.wrapper {
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.section-inner{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.more-button{
+    background-color: $red-color;
+    padding: 15px;
+    font-size:20px;
+    border-radius: 10px;
+    color:$white-text-color;
+}
+// !common styles
