@@ -499,6 +499,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100px;
   width: 100%;
   padding: 0 50px;
+  z-index: 1;
 }
 .section-header .section-header__container {
   max-width: none;

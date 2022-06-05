@@ -1,0 +1,116 @@
+/* ------------------------------------------------------------------------------------------Import */
+@import "normalize.scss";
+@import "null.scss";
+@import "header.scss";
+@import "variables.scss";
+@import "common.scss";
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------main */
+.section-main{
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url(../img/calcs/calcs-bg-6.jpg) center 70% no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 200px;
+    height: 100vh;
+    min-height: 800px;
+    padding-top: 200px;
+    &__container{
+        
+    }
+    &__title{
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    &__text{
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    &__buttons-list{
+        display: flex;
+        gap: 3vw;
+        flex-wrap: wrap;
+
+        .section-main__button{
+            flex-basis: 30%;
+            a{
+                display: block;
+                text-align: center;
+                padding: 20px;
+                border: 1px solid $white-color;
+            }
+
+        }
+    }
+}
+/* ------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------ calcs */
+
+.section-calcs {
+    padding: 100px 0px;
+
+    background-color:$black-color;
+    .section-calcs__container {
+
+        .section-calcs__calc-list {
+            color:$white-text-color;
+            .calc-list__text{
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+           .calc-list__title {
+               font-size: 50px;
+               text-align: center;
+               margin-bottom: 20px;
+            }
+            .calc-list__body {
+                width: 500px;
+                padding: 10px;
+                margin: 0 auto;
+                border-radius: 20px;
+                color:$black-text-color;
+                display: flex;
+                flex-direction: column;
+                background-color: #ecf0f1;
+                .variable{
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    input{
+                        display: block;
+                        width: 100px;
+                        border-radius: 4px;
+                        border: 1px solid black;
+                    
+                    }
+                }
+                .result-button{
+                    margin: 20px auto 10px;
+                    display: block;
+                    background: #FFA310;
+                    border: none;
+                    border-radius: 3px;
+                    color: #fff;
+                    font-size: 20px;
+                    padding: 11px 16px 10px;
+                    cursor: pointer;
+                    
+                    
+                }
+                .results{
+                    max-height: 0px;
+                    overflow: hidden;
+                    font-size: 20px;
+                }
+                
+
+            } 
+        }
+    }
+}
+
+
+/* ------------------------------------------------------------------------------------------ */

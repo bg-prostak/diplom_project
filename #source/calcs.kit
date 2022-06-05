@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercises</title>
+    <link item__link rel="stylesheet" href="css/calcs.css" />
+  </head>
+  <body>
+    <!-- @import "header.html" -->
+    <!-- main -->
+    <section class="section-outer section-main">
+      <div class="section-inner section-main__container">
+        <div class="section-main__title">
+          <h2>Калькуляторы</h2>
+        </div>
+        <div class="section-main__text">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum
+            voluptatum asperiores provident veniam aut corrupti. Modi sint
+            quaerat soluta autem dolore sit. Nostrum dolores architecto quidem
+            cupiditate aliquid, quod nihil.
+          </p>
+        </div>
+        <div class="section-main__buttons-list">
+          <div class="section-main__button">
+            <a href="">Калькулятор максимального веса</a>
+          </div>
+          <div class="section-main__button">
+            <a href="">Калькулятор максимального веса</a>
+          </div>
+          <div class="section-main__button">
+            <a href="">Калькулятор максимального веса</a>
+          </div>
+          <div class="section-main__button">
+            <a href="">Калькулятор максимального веса</a>
+          </div>
+          <div class="section-main__button">
+            <a href="">Калькулятор максимального веса</a>
+          </div>
+          <div class="section-main__button">
+            <a href="">Калькулятор максимального веса</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- !main -->
+    <!-- main -->
+    <section class="section-outer section-calcs">
+      <div class="section-inner section-calcs__container">
+        <div class="section-calcs__calc-list">
+          <div class="calc-list__title">
+            <h3>Калькулятор полного максимума</h3>
+          </div>
+          <div class="calc-list__text">
+            <h3>
+              Калькулятор полного максимума рассчитывает вес штанги, который
+              человек теоретически может поднять в одном повторении, если
+              известно, какой вес он поднимает в определённом количестве
+              повторений.
+            </h3>
+          </div>
+          <div class="calc-list__body">
+            <div class="variable">
+              <span>Вес штанги(кг)</span>
+              <input type="number" id="w" />
+            </div>
+            <div class="variable">
+              <span>Количество повторений</span>
+              <input type="number" id="r" />
+            </div>
+
+            <button class="result-button calc1" id="calc1">Рассчитать</button>
+
+            <div class="results">
+              <span>Максимальное повторение:</span>
+              <div class="result">
+                <span>по формуле Бжицки:</span>
+                <input disabled id="res1" />
+              </div>
+              <div class="result">
+                <span>по формуле Эйпли:</span>
+                <input disabled id="res2" />
+              </div>
+              <div class="result">
+                <span>по формуле Лэндера:</span>
+                <input disabled id="res3" />
+              </div>
+            </div>
+
+            <script>
+              function add1(w, r) {
+                return Math.round(w / (1.0278 - 0.0278 * r));
+              }
+              function add2(w, r) {
+                return Math.round(w * (1 + r / 30));
+              }
+              function add3(w, r) {
+                return Math.round((100 * w) / (101.3 - 2.67123 * r));
+              }
+              function buttonMaxWeightClick() {
+                let addResult1 = add1(+w.value, +r.value);
+                res1.value = addResult1;
+                let addResult2 = add2(+w.value, +r.value);
+                res2.value = addResult2;
+                let addResult3 = add3(+w.value, +r.value);
+                res3.value = addResult3;
+              }
+              calc1.onclick = buttonMaxWeightClick;
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- !main -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/calcs.js"></script>
+  </body>
+</html>
