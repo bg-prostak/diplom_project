@@ -25,22 +25,22 @@
         </div>
         <div class="section-main__buttons-list">
           <div class="section-main__button">
-            <a href="">Калькулятор максимального веса</a>
+            <a class="cross-fade" href="">Калькулятор максимального веса</a>
           </div>
           <div class="section-main__button">
-            <a href="">Калькулятор максимального веса</a>
+            <a class="cross-fade" href="">Калькулятор максимального веса</a>
           </div>
           <div class="section-main__button">
-            <a href="">Калькулятор максимального веса</a>
+            <a class="cross-fade" href="">Калькулятор максимального веса</a>
           </div>
           <div class="section-main__button">
-            <a href="">Калькулятор максимального веса</a>
+            <a class="cross-fade" href="">Калькулятор максимального веса</a>
           </div>
           <div class="section-main__button">
-            <a href="">Калькулятор максимального веса</a>
+            <a class="cross-fade" href="">Калькулятор максимального веса</a>
           </div>
           <div class="section-main__button">
-            <a href="">Калькулятор максимального веса</a>
+            <a class="cross-fade" href="">Калькулятор максимального веса</a>
           </div>
         </div>
       </div>
@@ -50,70 +50,512 @@
     <section class="section-outer section-calcs">
       <div class="section-inner section-calcs__container">
         <div class="section-calcs__calc-list">
-          <div class="calc-list__title">
-            <h3>Калькулятор полного максимума</h3>
+          <div class="calc-list__item calc-list__item-1">
+            <div class="calc-list__title">
+              <h3>Калькулятор полного максимума</h3>
+            </div>
+            <div class="calc-list__text">
+              <h3>
+                Калькулятор полного максимума рассчитывает вес штанги, который
+                человек теоретически может поднять в одном повторении, если
+                известно, какой вес он поднимает в определённом количестве
+                повторений.
+              </h3>
+            </div>
+            <div class="calc-list__body">
+              <div class="variable">
+                <span>Вес штанги(кг)</span>
+                <input type="number" id="x1" />
+              </div>
+              <div class="variable">
+                <span>Количество повторений</span>
+                <input type="number" id="y1" />
+              </div>
+
+              <button class="result-button calc1" id="calc1">Рассчитать</button>
+
+              <div class="results">
+                <span>Вес штанги(кг)</span>
+                <div class="result">
+                  <span>по формуле Бжицки:</span>
+                  <input disabled id="calc_1_res1" />
+                </div>
+                <div class="result">
+                  <span>по формуле Эйпли:</span>
+                  <input disabled id="calc_1_res2" />
+                </div>
+                <div class="result">
+                  <span>по формуле Лэндера:</span>
+                  <input disabled id="calc_1_res3" />
+                </div>
+              </div>
+
+              <script>
+                function calc_1_1(x1, y1) {
+                  return Math.round(x1 / (1.0278 - 0.0278 * y1));
+                }
+                function calc_1_2(x1, y1) {
+                  return Math.round(x1 * (1 + y1 / 30));
+                }
+                function calc_1_3(x1, y1) {
+                  return Math.round((100 * x1) / (101.3 - 2.67123 * y1));
+                }
+                function buttonCalc_1_Click() {
+                  let calc_1_Result1 = calc_1_1(+x1.value, +y1.value);
+                  calc_1_res1.value = calc_1_Result1;
+                  let calc_1_Result2 = calc_1_2(+x1.value, +y1.value);
+                  calc_1_res2.value = calc_1_Result2;
+                  let calc_1_Result3 = calc_1_3(+x1.value, +y1.value);
+                  calc_1_res3.value = calc_1_Result3;
+                }
+                calc1.onclick = buttonCalc_1_Click;
+              </script>
+            </div>
           </div>
-          <div class="calc-list__text">
-            <h3>
-              Калькулятор полного максимума рассчитывает вес штанги, который
-              человек теоретически может поднять в одном повторении, если
-              известно, какой вес он поднимает в определённом количестве
-              повторений.
-            </h3>
+          <div class="calc-list__item calc-list__item-2">
+            <div class="calc-list__title">
+              <h3>Калькулятор повторений</h3>
+            </div>
+            <div class="calc-list__text">
+              <h3>
+                Калькулятор повторений рассчитывает количество повторений,
+                который пауэрлифтер теоретически может выполнить с определённым
+                весом при условии, что он уже знает свой максимальный вес в
+                одном повторении (полный максимум).
+              </h3>
+            </div>
+            <div class="calc-list__body">
+              <div class="variable">
+                <span>Вес штанги(кг):</span>
+                <input type="number" id="x2" />
+              </div>
+              <div class="variable">
+                <span>Полный максимум(кг):</span>
+                <input type="number" id="y2" />
+              </div>
+
+              <button class="result-button calc2" id="calc2">Рассчитать</button>
+
+              <div class="results">
+                <span>Прогнозируемое количество повторений:</span>
+                <div class="result">
+                  <span>по формуле Бжицки:</span>
+                  <input disabled id="calc_2_res1" />
+                </div>
+                <div class="result">
+                  <span>по формуле Эйпли:</span>
+                  <input disabled id="calc_2_res2" />
+                </div>
+                <div class="result">
+                  <span>по формуле Лэндера:</span>
+                  <input disabled id="calc_2_res3" />
+                </div>
+              </div>
+
+              <script>
+                function calc_2_1(x2, y2) {
+                  return Math.round((1.0278 - x2 / y2) / 0.0278);
+                }
+                function calc_2_2(x2, y2) {
+                  return Math.round((y2 - x2) / (x2 * 0.033));
+                }
+                function calc_2_3(x2, y2) {
+                  return Math.round((1.013 - x2 / y2) / 0.0267123);
+                }
+                function buttonCalc_2_Click() {
+                  let calc_2_Result1 = calc_2_1(+x2.value, +y2.value);
+                  calc_2_res1.value = calc_2_Result1;
+                  let calc_2_Result2 = calc_2_2(+x2.value, +y2.value);
+                  calc_2_res2.value = calc_2_Result2;
+                  let calc_2_Result3 = calc_2_3(+x2.value, +y2.value);
+                  calc_2_res3.value = calc_2_Result3;
+                }
+                calc2.onclick = buttonCalc_2_Click;
+              </script>
+            </div>
           </div>
-          <div class="calc-list__body">
-            <div class="variable">
-              <span>Вес штанги(кг)</span>
-              <input type="number" id="w" />
+          <div class="calc-list__item calc-list__item-3">
+            <div class="calc-list__title">
+              <h3>Калькулятор рабочего веса</h3>
             </div>
-            <div class="variable">
-              <span>Количество повторений</span>
-              <input type="number" id="r" />
+            <div class="calc-list__text">
+              <h3>
+                Калькулятор рабочего веса вычисляет с каким весом пауэрливтер
+                может сделать заданное количество повторений при условии, что он
+                уже знает свой максимальный вес в одном повторении (полный
+                максимум).
+              </h3>
             </div>
+            <div class="calc-list__body">
+              <div class="variable">
+                <span>Полный максимум(кг):</span>
+                <input type="number" id="x3" />
+              </div>
+              <div class="variable">
+                <span>Количество повторений:</span>
+                <input type="number" id="y3" />
+              </div>
 
-            <button class="result-button calc1" id="calc1">Рассчитать</button>
+              <button class="result-button calc3" id="calc3">Рассчитать</button>
 
-            <div class="results">
-              <span>Максимальное повторение:</span>
-              <div class="result">
-                <span>по формуле Бжицки:</span>
-                <input disabled id="res1" />
+              <div class="results">
+                <span>Прогнозируемый вес на штанге:</span>
+                <div class="result">
+                  <span>по формуле Бжицки:</span>
+                  <input disabled id="calc_3_res1" />
+                </div>
+                <div class="result">
+                  <span>по формуле Эйпли:</span>
+                  <input disabled id="calc_3_res2" />
+                </div>
+                <div class="result">
+                  <span>по формуле Лэндера:</span>
+                  <input disabled id="calc_3_res3" />
+                </div>
               </div>
-              <div class="result">
-                <span>по формуле Эйпли:</span>
-                <input disabled id="res2" />
-              </div>
-              <div class="result">
-                <span>по формуле Лэндера:</span>
-                <input disabled id="res3" />
-              </div>
+
+              <script>
+                function calc_3_1(x3, y3) {
+                  return Math.round((1.0278 - 0.0278 * y3) * x3);
+                }
+                function calc_3_2(x3, y3) {
+                  return Math.round(
+                    // (x3 * x3) / (0.066 * y3 + 0.001089 * (y3 * y3) + 1)
+                    (1.0278 - 0.0278 * y3) * x3
+                  );
+                }
+                function calc_3_3(x3, y3) {
+                  return Math.round((1.013 - 0.0267123 * y3) * x3);
+                }
+                function buttonCalc_3_Click() {
+                  let calc_3_Result1 = calc_3_1(+x3.value, +y3.value);
+                  calc_3_res1.value = calc_3_Result1;
+                  let calc_3_Result2 = calc_3_2(+x3.value, +y3.value);
+                  calc_3_res2.value = calc_3_Result2;
+                  let calc_3_Result3 = calc_3_3(+x3.value, +y3.value);
+                  calc_3_res3.value = calc_3_Result3;
+                }
+                calc3.onclick = buttonCalc_3_Click;
+              </script>
             </div>
+          </div>
+          <div class="calc-list__item calc-list__item-4">
+            <div class="calc-list__title">
+              <h3>Калькулятор калорий</h3>
+            </div>
+            <div class="calc-list__text">
+              <h3>
+                Калькулятор калорий позволит вам рассчитать то количество
+                энергии, которое необходимо ежедневно получать вашему организму
+                в зависимости от вашего роста, веса, возраста и степени
+                физической активности (норма калорий)
+              </h3>
+            </div>
+            <div class="calc-list__body calories-calc">
+              <div class="fusion-menu-anchor" id="calc"></div>
+              <div id="calc-m" class="calc-wrap">
+                <!--<p class="calc-title"><h1>Калькулятор калорий</h1></p>-->
 
-            <script>
-              function add1(w, r) {
-                return Math.round(w / (1.0278 - 0.0278 * r));
-              }
-              function add2(w, r) {
-                return Math.round(w * (1 + r / 30));
-              }
-              function add3(w, r) {
-                return Math.round((100 * w) / (101.3 - 2.67123 * r));
-              }
-              function buttonMaxWeightClick() {
-                let addResult1 = add1(+w.value, +r.value);
-                res1.value = addResult1;
-                let addResult2 = add2(+w.value, +r.value);
-                res2.value = addResult2;
-                let addResult3 = add3(+w.value, +r.value);
-                res3.value = addResult3;
-              }
-              calc1.onclick = buttonMaxWeightClick;
-            </script>
+                <form name="calories" id="calories">
+                  <div class="sex">
+                    <p class="calc-caption">Укажите Ваш пол:</p>
+                    <div class="calc-sex">
+                      <div class="calc-sex-l calc-radio-item">
+                        <input
+                          id="radio-1"
+                          class="radio"
+                          name="sex"
+                          type="radio"
+                          value="female"
+                        />
+                        <label for="radio-1">Женский</label>
+                      </div>
+                      <div class="calc-sex-r calc-radio-item">
+                        <input
+                          id="radio-2"
+                          class="radio"
+                          checked="checked"
+                          name="sex"
+                          type="radio"
+                          value="male"
+                        />
+                        <label for="radio-2">Мужской</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="params">
+                    <div class="calc-params">
+                      <p class="calc-caption">Возраст:</p>
+                      <div class="calc-input-and-naim">
+                        <div class="calc-input">
+                          <input
+                            type="text"
+                            min="1"
+                            max="100"
+                            name="age"
+                            placeholder="35"
+                            maxlength="2"
+                          />
+                        </div>
+                        <div class="naim">лет</div>
+                      </div>
+                    </div>
+                    <div class="calc-params">
+                      <p class="calc-caption">Вес:</p>
+                      <div class="calc-input-and-naim">
+                        <div class="calc-input">
+                          <input
+                            type="text"
+                            name="weight"
+                            placeholder="80"
+                            maxlength="3"
+                          />
+                        </div>
+                        <div class="naim">кг</div>
+                      </div>
+                    </div>
+                    <div class="calc-params">
+                      <p class="calc-caption">Рост:</p>
+                      <div class="calc-input-and-naim">
+                        <div class="calc-input">
+                          <input
+                            type="text"
+                            name="height"
+                            placeholder="175"
+                            maxlength="3"
+                          />
+                        </div>
+
+                        <div class="naim">см</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="goactivity">
+                    <div class="goal">
+                      <p class="calc-caption">Цель:</p>
+                      <div class="calc-goal-l calc-radio-item">
+                        <input
+                          id="radio-3"
+                          class="radio"
+                          type="radio"
+                          name="goal"
+                          value="1"
+                        /><label for="radio-3">Сбросить вес</label>
+                      </div>
+                      <div class="calc-goal-c calc-radio-item">
+                        <input
+                          id="radio-4"
+                          class="radio"
+                          type="radio"
+                          name="goal"
+                          value="2"
+                          checked=""
+                        /><label for="radio-4">Поддержать форму</label>
+                      </div>
+                      <div class="calc-goal-r calc-radio-item">
+                        <input
+                          id="radio-5"
+                          class="radio"
+                          type="radio"
+                          name="goal"
+                          value="3"
+                        /><label for="radio-5">Набрать вес</label>
+                      </div>
+                    </div>
+                    <div class="activity">
+                      <p class="calc-caption">Физическая активность:</p>
+                      <select class="a-width" id="activity" name="activity">
+                        <option value="1.2">
+                          минимум/отсутствие физ. нагрузки
+                        </option>
+                        <option value="1.3" selected="">
+                          легкая нагрузка 1–3 раза в неделю
+                        </option>
+                        <option value="1.6">3-5 тренировок в неделю</option>
+                        <option value="1.7">тренировки ежедневно</option>
+                        <option value="1.9">2 тренировки в день</option>
+                      </select>
+                    </div>
+                  </div>
+                  <input
+                    class="resultbtn result-button"
+                    type="button"
+                    value="Вычислить"
+                    id="button"
+                  />
+                  <div class="results">
+                    <div class="main-result">
+                      <p class="calc-caption">
+                        Необходимое количество калорий в день:
+                      </p>
+                      <p class="calc-result" id="callor">2313</p>
+                    </div>
+                    <div class="result-table">
+                      <p class="calc-caption">
+                        Сравнительная таблица методов расчета калорий:
+                      </p>
+                      <p class="calc-txt">
+                        Формула Миффина - Сан Жеора :
+                        <span class="calc-result" id="maffin">2243</span> ккал
+                      </p>
+                      <p class="calc-txt">
+                        Новое уравнение Харриса - Бенедикта :
+                        <span class="calc-result" id="harris">2347</span> ккал
+                      </p>
+                      <p class="calc-txt">
+                        Формула калорийности ВОЗ :
+                        <span class="calc-result" id="voz">2348</span> ккал
+                      </p>
+                      <p class="calc-txt">
+                        Средний результат :
+                        <span class="calc-result" id="result">2313</span> ккал
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <script>
+                var form = document.getElementById("calories");
+                var button = document.getElementById("button");
+                var callor = document.getElementById("callor");
+                var maffin = document.getElementById("maffin");
+                var harris = document.getElementById("harris");
+                var voz = document.getElementById("voz");
+                var result = document.getElementById("result");
+
+                var maf = 0;
+                var har = 0;
+                var vo = 0;
+                var res = 0;
+
+                var rep = /\d/;
+
+                form.age.onkeypress = function (evt) {
+                  if (!rep.test(evt.key)) {
+                    evt.preventDefault();
+                  }
+                };
+
+                form.weight.onkeypress = function (evt) {
+                  if (!rep.test(evt.key)) {
+                    evt.preventDefault();
+                  }
+                };
+
+                form.height.onkeypress = function (evt) {
+                  if (!rep.test(evt.key)) {
+                    evt.preventDefault();
+                  }
+                };
+
+                button.onclick = function () {
+                  if (form.sex.value == "male") {
+                    har =
+                      (66.47 +
+                        13.75 * form.weight.value +
+                        5.0 * form.height.value -
+                        6.74 * form.age.value) *
+                      form.activity.value;
+                    maf =
+                      (9.99 * form.weight.value +
+                        6.25 * form.height.value -
+                        4.92 * form.age.value +
+                        5) *
+                      form.activity.value;
+
+                    if (form.age.value < 31) {
+                      vo =
+                        (0.063 * form.weight.value + 2.896) *
+                        240 *
+                        form.activity.value;
+                    }
+                    if (form.age.value > 30 && form.age.value < 61) {
+                      vo =
+                        (0.0484 * form.weight.value + 3.653) *
+                        240 *
+                        form.activity.value;
+                    }
+                    if (form.age.value > 60) {
+                      vo =
+                        (0.0491 * form.weight.value + 2.459) *
+                        240 *
+                        form.activity.value;
+                    }
+                  } else {
+                    har =
+                      (655.1 +
+                        9.6 * form.weight.value +
+                        1.85 * form.height.value -
+                        4.68 * form.age.value) *
+                      form.activity.value;
+                    maf =
+                      (9.99 * form.weight.value +
+                        6.25 * form.height.value -
+                        4.92 * form.age.value -
+                        161) *
+                      form.activity.value;
+
+                    if (form.age.value < 31) {
+                      vo =
+                        (0.062 * form.weight.value + 2.036) *
+                        240 *
+                        form.activity.value;
+                    }
+                    if (form.age.value > 30 && form.age.value < 61) {
+                      vo =
+                        (0.034 * form.weight.value + 3.538) *
+                        240 *
+                        form.activity.value;
+                    }
+                    if (form.age.value > 60) {
+                      vo =
+                        (0.038 * form.weight.value + 2.755) *
+                        240 *
+                        form.activity.value;
+                    }
+                  }
+
+                  var midResult = ((maf + har + vo) / 3).toFixed(2);
+
+                  if (form.goal.value == 1) {
+                    har = (har - har * 0.15).toFixed(2);
+                    maf = (maf - maf * 0.15).toFixed(2);
+                    vo = (vo - vo * 0.15).toFixed(2);
+                    midResult = (midResult - midResult * 0.15).toFixed(2);
+                  }
+
+                  if (form.goal.value == "3") {
+                    har = +har + 500;
+                    maf = +maf + 500;
+                    vo = +vo + 500;
+                    midResult = +midResult + 500;
+                  }
+
+                  var r = 0;
+                  var resultInterval = setInterval(function () {
+                    if (r > Math.round(midResult)) {
+                      callor.innerHTML = r - (r - Math.round(midResult));
+                      clearInterval(resultInterval);
+                      return;
+                    }
+                    callor.innerHTML = r;
+                    r += 100;
+                  }, 20);
+
+                  maffin.innerHTML = Math.round(maf);
+                  harris.innerHTML = Math.round(har);
+                  voz.innerHTML = Math.round(vo);
+                  result.innerHTML = Math.round(midResult);
+                };
+              </script>
+              <div class="fusion-clearfix"></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- !main -->
+    <!-- @import "footer.html" -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/calcs.js"></script>
   </body>

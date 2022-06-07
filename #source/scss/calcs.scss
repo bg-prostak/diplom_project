@@ -4,6 +4,7 @@
 @import "header.scss";
 @import "variables.scss";
 @import "common.scss";
+@import "footer.scss";
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------main */
 .section-main{
@@ -55,62 +56,262 @@
     .section-calcs__container {
 
         .section-calcs__calc-list {
-            color:$white-text-color;
-            .calc-list__text{
-                font-size: 20px;
-                margin-bottom: 20px;
-            }
-           .calc-list__title {
-               font-size: 50px;
-               text-align: center;
-               margin-bottom: 20px;
-            }
-            .calc-list__body {
-                width: 500px;
-                padding: 10px;
-                margin: 0 auto;
-                border-radius: 20px;
-                color:$black-text-color;
-                display: flex;
-                flex-direction: column;
-                background-color: #ecf0f1;
-                .variable{
-                    display: flex;
-                    justify-content: space-between;
+            .calc-list__item{
+                margin-bottom: 50px;
+                color:$white-text-color;
+                .calc-list__text{
                     font-size: 20px;
-                    margin-bottom: 10px;
-                    input{
-                        display: block;
-                        width: 100px;
-                        border-radius: 4px;
-                        border: 1px solid black;
-                    
-                    }
+                    margin-bottom: 20px;
                 }
-                .result-button{
-                    margin: 20px auto 10px;
-                    display: block;
-                    background: #FFA310;
-                    border: none;
-                    border-radius: 3px;
-                    color: #fff;
-                    font-size: 20px;
-                    padding: 11px 16px 10px;
-                    cursor: pointer;
-                    
-                    
-                }
-                .results{
-                    max-height: 0px;
-                    overflow: hidden;
-                    font-size: 20px;
+                .calc-list__title {
+                    font-size: 50px;
+                    text-align: center;
+                    margin-bottom: 20px;
                 }
                 
-
+                .calc-list__body {
+                    width: 500px;
+                    padding: 10px;
+                    margin: 0 auto;
+                    border-radius: 20px;
+                    color:$black-text-color;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #ecf0f1;
+                    .variable{
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                        input{
+                            display: block;
+                            width: 100px;
+                            border-radius: 4px;
+                            border: 1px solid black;
+                        
+                        }
+                    }
+                    .results{
+                        max-height: 0px;
+                        overflow: hidden;
+                        font-size: 20px;
+                    }
+                }
+                .calories-calc{
+                    width: 700px;
+                }
             } 
+            
         }
     }
 }
 
+.fusion-text{
+
+}
+.calc-wrap{
+    #calories{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 25px;
+        .calc-radio-item{
+                display: flex;
+                
+                align-items: center;
+            }
+        .sex{
+            p{margin-bottom: 10px;}
+            width: 100%;
+            text-align: center;
+           .calc-sex{
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                margin-bottom: 20px;
+            } 
+            
+        }
+        
+        .params{
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            .calc-caption {
+                
+                margin-bottom: 20px;
+            }
+            .calc-input-and-naim {
+                display: flex;
+                align-items: center;
+
+                .calc-input {
+                    input{
+                       width: 40px; 
+                       height: 40px;
+                       font-size: 20px;
+                       text-align: center;
+                       margin-right: 10px;
+                       border-radius: 5px;
+                    }
+                    
+                }
+                .naim {
+                    font-size: 20px;
+                }
+            }
+            
+        }
+        .goactivity{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .calc-radio-item{
+               
+                font-size: 20px;
+              
+            }
+            .calc-caption{
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .goal{
+                p{
+                    
+                }
+            }
+            .activity{
+                .a-width{
+                    font-size: 20px;
+                    border-radius: 5px;
+                    padding: 5px;
+                }
+            }
+        }
+        .result-button {
+
+        }
+        .results{
+            width: 100%;
+            .main-result{
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+            .result-table{
+                font-size: 20px;
+            }
+        }
+        margin-bottom: 30px;
+    }
+    
+}
+
+.radio {
+    width: 1.3rem;
+    height: 1.3rem;
+    transition: background-color .15s;
+    margin-right: 10px;
+    &:checked {
+      background-image: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20standalone%3D%22no%22%3F%3E%3Csvg%20version%3D%221.1%22%20width%3D%2240%22%20height%3D%2240%22%0AviewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%2240%22%20r%3D%2224%22%20style%3D%22fill%3A%23ffffff%22/%3E%3C/svg%3E);
+      background-size: 80% 80%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #727e96;;
+    }
+    appearance: none;
+    vertical-align: text-bottom;
+    outline: 0;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 1px  #727e96;;
+    border-radius: 1.3em;
+    background: #fff;
+    
+    ~ label {
+      cursor: pointer;
+    }
+    
+    &::-ms-check {
+      display: none; // unstyle IE checkboxes
+    }
+  }
+
 
 /* ------------------------------------------------------------------------------------------ */
+.result-button{
+    margin: 20px auto 10px;
+    display: block;
+    background: #FFA310;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 20px;
+    padding: 11px 16px 10px;
+    cursor: pointer;
+    
+    
+}
+
+////////////////////////////////////////
+// CROSS FADE 
+////////////////////////////////////////
+
+$cross-fade-border-width: 2px;
+$cross-fade-border-color: black;
+$sec-cross-fade-border-color: black;
+$cross-fade-button-padding: 16px 28px;
+$cross-fade-text-color: white;
+$sec-cross-fade-text-color: white;
+$cross-fade-border-radius: 0px;
+$cross-fade-background: white;
+$sec-cross-fade-background: #666;
+$cross-fade-transition-time: 0.75s;
+
+.cross-fade {
+  display: inline-block;
+  padding: $cross-fade-button-padding;
+  border: $cross-fade-border-width $cross-fade-border-color solid;
+  text-align: center;
+  text-decoration: none;
+  color: $cross-fade-text-color;
+  position: relative;
+  overflow: hidden;
+  transition: color $cross-fade-transition-time ease-in-out;
+  z-index: 1;
+  border-radius: $cross-fade-border-radius;
+  
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25%;
+    width: 150%;
+    height: 100%;
+    background: rgba($sec-cross-fade-background, 0.5);
+    transition: transform $cross-fade-transition-time ease-in-out;
+    z-index: -1;
+  }
+  
+  &:before {
+    transform: translate3d(100%, 0, 0) skew(20deg);
+    transform-origin: 0 0;
+  }
+  
+  &:after {
+    transform: translate3d(-100%, 0, 0) skew(20deg);
+    transform-origin: 100% 100%;
+  }
+  
+  &:hover {
+    color: $sec-cross-fade-text-color;
+    &:before,
+    &:after {
+      transform: translate3d(0, 0, 0) skew(20deg);
+    }
+  }
+}
+

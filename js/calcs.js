@@ -1,6 +1,5 @@
 $(document).ready(function(){
     $('.result-button').click(function(event){
-        console.log(123);
         $('.results').addClass('active');
         let content = this.nextElementSibling;
         console.log(this.nextElementSibling);

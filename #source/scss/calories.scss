@@ -1,0 +1,130 @@
+/* ------------------------------------------------------------------------------------------Import */
+@import "normalize.scss";
+@import "null.scss";
+@import "header.scss";
+@import "variables.scss";
+@import "common.scss";
+@import "footer.scss";
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------main */
+.section-main{
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url(../img/pitanie/pitanie-bg-3.jpg) center 70% no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 200px;
+    height: 100vh;
+    min-height: 800px;
+    padding-top: 200px;
+    &__container{
+        
+    }
+    &__title{
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    &__text{
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    
+}
+/* ------------------------------------------------------------------------------------------ */
+.section-calculator{
+    padding: 100px 0;
+    background-color: $white-color;
+    color:$black-color;
+    .calories__table{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .article__table{
+        overflow: hidden;
+        
+        margin: 0;
+        border-radius: 6px;
+        box-shadow: rgb(0 0 0 / 25%) 0px 2px 9px;
+    }
+    .article__table-title{
+        font-size: 25px;
+        line-height: 27px;
+        font-weight: 700;
+        padding: 12px 10px;
+    }
+    .article__table-wr{
+        font-size: 20px;
+        table{
+            width: 100%;
+            thead{
+                background-color: $red-color;
+                color:$white-text-color;
+                td{
+                    padding: 5px;
+           
+                }
+            }
+            tbody{
+               
+                td{
+                    padding: 5px;
+                    border-bottom: 1px solid #d9d9d9;
+           
+                }
+            }
+        }
+
+        
+
+
+        
+    }
+    .article__block__h3{
+        margin: 20px 0 35px;
+        font-size: 30px;
+    }
+    tr{
+       td{
+        &:first-child{width: 40%;}
+        &:not(:first-child){width: 15%;}
+
+        
+        } 
+    }
+    .calories__links {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        .links__item {
+            a{
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(221, 211, 211, 0.705);
+                border-radius: 5px;
+                box-shadow: rgb(0 0 0 / 25%) 0px 2px 9px;
+                transition: all 0.3s ease-in;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover{
+                    box-shadow: none;
+                }
+                img{
+                    max-width: 70px;
+                    max-height: 70px;
+
+                }
+            }
+        }
+    }
+    
+    
+    
+    }
+
+      
+
