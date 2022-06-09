@@ -569,7 +569,7 @@ body {
 
 footer.site-footer {
   background-color: #26272b;
-  padding: 30px 0 30px;
+  padding: 20px 0 20px;
   font-size: 15px;
   line-height: 24px;
   color: #737373;
@@ -711,6 +711,46 @@ footer.site-footer .social-icons a.dribbble:hover {
   }
 }
 
+.arrow {
+  width: 50px;
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 25px);
+  -webkit-animation: arrowDown 2s infinite;
+          animation: arrowDown 2s infinite;
+}
+.arrow img {
+  width: 70px;
+  height: 70px;
+}
+
+.arrow.two {
+  opacity: 0;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes arrowDown {
+  0% {
+    bottom: 30px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes arrowDown {
+  0% {
+    bottom: 30px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0px;
+    opacity: 0;
+  }
+}
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------main */
 .section-main {
@@ -756,6 +796,7 @@ footer.site-footer .social-icons a.dribbble:hover {
 /* ------------------------------------------------------------------------------------------ calcs */
 .section-calcs {
   padding: 100px 0px;
+  background-image: url(../img/exercices/main-bg.png);
   background-color: #080808;
 }
 .section-calcs .section-calcs__container .section-calcs__calc-list .calc-list__item {
@@ -763,8 +804,8 @@ footer.site-footer .social-icons a.dribbble:hover {
   color: #ffffff;
 }
 .section-calcs .section-calcs__container .section-calcs__calc-list .calc-list__item .calc-list__text {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 25px;
+  margin-bottom: 25px;
 }
 .section-calcs .section-calcs__container .section-calcs__calc-list .calc-list__item .calc-list__title {
   font-size: 50px;
@@ -801,6 +842,7 @@ footer.site-footer .social-icons a.dribbble:hover {
   width: 100px;
   border-radius: 4px;
   border: 1px solid black;
+  padding-left: 5px;
 }
 .section-calcs .section-calcs__container .section-calcs__calc-list .calc-list__item .calc-list__body .results {
   max-height: 0px;
@@ -809,6 +851,32 @@ footer.site-footer .social-icons a.dribbble:hover {
 }
 .section-calcs .section-calcs__container .section-calcs__calc-list .calc-list__item .calories-calc {
   width: 700px;
+}
+.section-calcs .section-calcs__container .section-calcs__calc-list .calc-list__border {
+  border-top: 3px #e89f09 solid;
+  margin-bottom: 20px;
+}
+.section-calcs .section-calcs__container .section-calcs__calc-list .calc-list__item-5 select {
+  width: 100px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 15px;
+}
+.section-calcs .section-calcs__container .section-calcs__calc-list .calc-list__item-5 .results {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  max-height: 0px;
+  overflow: hidden;
+}
+.section-calcs .section-calcs__container .section-calcs__calc-list .calc-list__item-5 .results div {
+  font-size: 25px;
+}
+.section-calcs .section-calcs__container .section-calcs__calc-list .calc-list__item-6 select {
+  width: 100px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 15px;
 }
 
 .calc-wrap #calories {

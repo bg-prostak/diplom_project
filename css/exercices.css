@@ -569,7 +569,7 @@ body {
 
 footer.site-footer {
   background-color: #26272b;
-  padding: 30px 0 30px;
+  padding: 20px 0 20px;
   font-size: 15px;
   line-height: 24px;
   color: #737373;
@@ -779,8 +779,15 @@ footer.site-footer .social-icons a.dribbble:hover {
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------exercices */
 .section-exercices {
-  padding: 200px 10px;
+  padding: 80px 10px;
   background-color: #080808;
+  background-image: url(../img/exercices/main-bg.png);
+}
+.section-exercices__title {
+  font-size: 60px;
+  margin-bottom: 80px;
+  text-align: center;
+  text-transform: uppercase;
 }
 .section-exercices__list {
   display: -webkit-box;
@@ -826,6 +833,7 @@ footer.site-footer .social-icons a.dribbble:hover {
 }
 .section-exercices__list .list__group .group__item h2 {
   font-size: 70px;
+  text-transform: uppercase;
 }
 .section-exercices__list .list__group .group__item:hover {
   -webkit-filter: none;

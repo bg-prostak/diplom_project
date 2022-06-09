@@ -55,8 +55,15 @@
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------exercices */
 .section-exercices{
-    padding: 200px 10px;
+    padding: 80px 10px;
     background-color:$black-color;
+    background-image: url(../img/exercices/main-bg.png);
+    &__title{
+        font-size: 60px;
+        margin-bottom: 80px;
+        text-align: center;
+        text-transform: uppercase;
+    }
     &__list{
         display: flex;
         flex-direction: column; 
@@ -86,6 +93,7 @@
                
                 h2{
                     font-size: 70px;
+                    text-transform: uppercase;
                 }
                 &:hover{
                     filter: none;

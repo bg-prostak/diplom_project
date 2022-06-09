@@ -569,7 +569,7 @@ body {
 
 footer.site-footer {
   background-color: #26272b;
-  padding: 30px 0 30px;
+  padding: 20px 0 20px;
   font-size: 15px;
   line-height: 24px;
   color: #737373;
@@ -711,20 +711,66 @@ footer.site-footer .social-icons a.dribbble:hover {
   }
 }
 
+.arrow {
+  width: 50px;
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 25px);
+  -webkit-animation: arrowDown 2s infinite;
+          animation: arrowDown 2s infinite;
+}
+.arrow img {
+  width: 70px;
+  height: 70px;
+}
+
+.arrow.two {
+  opacity: 0;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes arrowDown {
+  0% {
+    bottom: 30px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes arrowDown {
+  0% {
+    bottom: 30px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 0px;
+    opacity: 0;
+  }
+}
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------main */
 .section-main {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.5))), url(../img/pitanie/pitanie-bg-3.jpg) center 70% no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(../img/pitanie/pitanie-bg-3.jpg) center 70% no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/calories/main-bg.jpg) center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/calories/main-bg.jpg) center no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 100vh;
   min-height: 800px;
   padding-top: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .section-main__title {
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 700;
   margin-bottom: 50px;
   text-align: center;
@@ -735,56 +781,23 @@ footer.site-footer .social-icons a.dribbble:hover {
 }
 
 /* ------------------------------------------------------------------------------------------ */
-.section-calculator {
-  padding: 100px 0;
+.section-calories {
+  background-image: url(../img/calories/cal-bg.png);
+  background-size: 30%;
+  padding: 0;
   background-color: #ffffff;
   color: #080808;
 }
-.section-calculator .calories__table {
-  width: 80%;
-  margin: 0 auto;
+.section-calories .section-inner {
+  background-color: #fff;
+  padding-top: 50px;
 }
-.section-calculator .article__table {
-  overflow: hidden;
-  margin: 0;
-  border-radius: 6px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 9px;
-          box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 9px;
+.section-calories .calories__title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
 }
-.section-calculator .article__table-title {
-  font-size: 25px;
-  line-height: 27px;
-  font-weight: 700;
-  padding: 12px 10px;
-}
-.section-calculator .article__table-wr {
-  font-size: 20px;
-}
-.section-calculator .article__table-wr table {
-  width: 100%;
-}
-.section-calculator .article__table-wr table thead {
-  background-color: #d81c2b;
-  color: #ffffff;
-}
-.section-calculator .article__table-wr table thead td {
-  padding: 5px;
-}
-.section-calculator .article__table-wr table tbody td {
-  padding: 5px;
-  border-bottom: 1px solid #d9d9d9;
-}
-.section-calculator .article__block__h3 {
-  margin: 20px 0 35px;
-  font-size: 30px;
-}
-.section-calculator tr td:first-child {
-  width: 40%;
-}
-.section-calculator tr td:not(:first-child) {
-  width: 15%;
-}
-.section-calculator .calories__links {
+.section-calories .calories__links {
   width: 80%;
   margin: 0 auto;
   display: -webkit-box;
@@ -796,17 +809,18 @@ footer.site-footer .social-icons a.dribbble:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 40px;
 }
-.section-calculator .calories__links .links__item a {
+.section-calories .calories__links .links__item a {
   display: block;
   width: 100px;
   height: 100px;
   background-color: rgba(221, 211, 211, 0.705);
   border-radius: 5px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 9px;
-          box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 9px;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 2px;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -817,11 +831,55 @@ footer.site-footer .social-icons a.dribbble:hover {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.section-calculator .calories__links .links__item a:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.section-calories .calories__links .links__item a:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 11px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 11px;
 }
-.section-calculator .calories__links .links__item a img {
+.section-calories .calories__links .links__item a img {
   max-width: 70px;
   max-height: 70px;
+}
+.section-calories .calories__table {
+  width: 80%;
+  margin: 0 auto;
+}
+.section-calories .calories__table .article__table {
+  overflow: hidden;
+  margin: 0;
+  border-radius: 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 9px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 9px;
+}
+.section-calories .calories__table .article__table-title {
+  font-size: 25px;
+  line-height: 27px;
+  font-weight: 700;
+  padding: 12px 10px;
+}
+.section-calories .calories__table .article__table-wr {
+  font-size: 20px;
+}
+.section-calories .calories__table .article__table-wr table {
+  width: 100%;
+}
+.section-calories .calories__table .article__table-wr table thead {
+  background-color: #d81c2b;
+  color: #ffffff;
+}
+.section-calories .calories__table .article__table-wr table thead td {
+  padding: 5px;
+}
+.section-calories .calories__table .article__table-wr table tbody td {
+  padding: 5px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.section-calories .calories__table .article__block__h3 {
+  margin: 20px 0 35px;
+  font-size: 30px;
+}
+.section-calories .calories__table tr td:first-child {
+  width: 40%;
+}
+.section-calories .calories__table tr td:not(:first-child) {
+  width: 15%;
 }

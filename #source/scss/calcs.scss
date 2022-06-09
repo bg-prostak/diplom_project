@@ -5,11 +5,13 @@
 @import "variables.scss";
 @import "common.scss";
 @import "footer.scss";
+@import "arrow.scss";
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------main */
 .section-main{
     background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url(../img/calcs/calcs-bg-6.jpg) center 70% no-repeat;
     background-repeat: no-repeat;
+    
     background-size: cover;
     padding-bottom: 200px;
     height: 100vh;
@@ -51,7 +53,7 @@
 
 .section-calcs {
     padding: 100px 0px;
-
+    background-image: url(../img/exercices/main-bg.png);
     background-color:$black-color;
     .section-calcs__container {
 
@@ -60,8 +62,8 @@
                 margin-bottom: 50px;
                 color:$white-text-color;
                 .calc-list__text{
-                    font-size: 20px;
-                    margin-bottom: 20px;
+                    font-size: 25px;
+                    margin-bottom: 25px;
                 }
                 .calc-list__title {
                     font-size: 50px;
@@ -88,6 +90,7 @@
                             width: 100px;
                             border-radius: 4px;
                             border: 1px solid black;
+                            padding-left: 5px;
                         
                         }
                     }
@@ -96,11 +99,41 @@
                         overflow: hidden;
                         font-size: 20px;
                     }
+                    
                 }
                 .calories-calc{
                     width: 700px;
                 }
             } 
+            .calc-list__border{
+                border-top: 3px #e89f09 solid; margin-bottom: 20px;
+            }
+            .calc-list__item-5{
+                select{
+                    width: 100px; 
+                    border-radius: 5px; 
+                    border: 1px solid black;
+                    font-size: 15px;
+                }
+                .results{
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    max-height: 0px;
+                    overflow: hidden;
+                    div{
+                        font-size: 25px;
+                    }
+                }
+            }
+            .calc-list__item-6{
+                select{
+                    width: 100px; 
+                    border-radius: 5px; 
+                    border: 1px solid black;
+                    font-size: 15px;
+                }
+            }
             
         }
     }

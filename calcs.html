@@ -21,8 +21,8 @@
         <a href="main.html#section-start">С чего начать?</a>
       </li>
       <li class="nav__item"><a href="exercises.html">База упражнений</a></li>
-      <li class="nav__item"><a href="pitanie.html">Питание</a></li>
-      <li class="nav__item"><a href="#portfolio">Программы</a></li>
+      <li class="nav__item"><a href="#">Питание</a></li>
+      <li class="nav__item"><a href="#">Программы</a></li>
       <li class="nav__item"><a href="calcs.html">Калькуляторы</a></li>
       <li class="nav__item">
         <a href="calories.html">Таблица калорийности</a>
@@ -47,22 +47,24 @@
         </div>
         <div class="section-main__buttons-list">
           <div class="section-main__button">
-            <a class="cross-fade" href="">Калькулятор максимального веса</a>
+            <a class="cross-fade" href="#calc-1"
+              >Калькулятор полного максимума</a
+            >
           </div>
           <div class="section-main__button">
-            <a class="cross-fade" href="">Калькулятор максимального веса</a>
+            <a class="cross-fade" href="#calc-2">Калькулятор повторений</a>
           </div>
           <div class="section-main__button">
-            <a class="cross-fade" href="">Калькулятор максимального веса</a>
+            <a class="cross-fade" href="#calc-3">Калькулятор рабочего веса</a>
           </div>
           <div class="section-main__button">
-            <a class="cross-fade" href="">Калькулятор максимального веса</a>
+            <a class="cross-fade" href="#calc-4">Калькулятор калорий</a>
           </div>
           <div class="section-main__button">
-            <a class="cross-fade" href="">Калькулятор максимального веса</a>
+            <a class="cross-fade" href="#calc-5">Идеальный вес тела</a>
           </div>
           <div class="section-main__button">
-            <a class="cross-fade" href="">Калькулятор максимального веса</a>
+            <a class="cross-fade" href="#calc-6">Количество протеина</a>
           </div>
         </div>
       </div>
@@ -72,7 +74,7 @@
     <section class="section-outer section-calcs">
       <div class="section-inner section-calcs__container">
         <div class="section-calcs__calc-list">
-          <div class="calc-list__item calc-list__item-1">
+          <div class="calc-list__item calc-list__item-1" id="calc-1">
             <div class="calc-list__title">
               <h3>Калькулятор полного максимума</h3>
             </div>
@@ -97,7 +99,10 @@
               <button class="result-button calc1" id="calc1">Рассчитать</button>
 
               <div class="results">
-                <span>Вес штанги(кг)</span>
+                <div
+                  style="border-top: 3pt #e89f09 solid; margin-bottom: 6pt"
+                ></div>
+                <span>Вес штанги(кг):</span>
                 <div class="result">
                   <span>по формуле Бжицки:</span>
                   <input disabled id="calc_1_res1" />
@@ -134,7 +139,8 @@
               </script>
             </div>
           </div>
-          <div class="calc-list__item calc-list__item-2">
+          <div class="calc-list__border"></div>
+          <div class="calc-list__item calc-list__item-2" id="calc-2">
             <div class="calc-list__title">
               <h3>Калькулятор повторений</h3>
             </div>
@@ -159,6 +165,9 @@
               <button class="result-button calc2" id="calc2">Рассчитать</button>
 
               <div class="results">
+                <div
+                  style="border-top: 3pt #e89f09 solid; margin-bottom: 6pt"
+                ></div>
                 <span>Прогнозируемое количество повторений:</span>
                 <div class="result">
                   <span>по формуле Бжицки:</span>
@@ -196,7 +205,8 @@
               </script>
             </div>
           </div>
-          <div class="calc-list__item calc-list__item-3">
+          <div class="calc-list__border"></div>
+          <div class="calc-list__item calc-list__item-3" id="calc-3">
             <div class="calc-list__title">
               <h3>Калькулятор рабочего веса</h3>
             </div>
@@ -221,6 +231,9 @@
               <button class="result-button calc3" id="calc3">Рассчитать</button>
 
               <div class="results">
+                <div
+                  style="border-top: 3pt #e89f09 solid; margin-bottom: 6pt"
+                ></div>
                 <span>Прогнозируемый вес на штанге:</span>
                 <div class="result">
                   <span>по формуле Бжицки:</span>
@@ -261,7 +274,8 @@
               </script>
             </div>
           </div>
-          <div class="calc-list__item calc-list__item-4">
+          <div class="calc-list__border"></div>
+          <div class="calc-list__item calc-list__item-4" id="calc-4">
             <div class="calc-list__title">
               <h3>Калькулятор калорий</h3>
             </div>
@@ -402,10 +416,13 @@
                   <input
                     class="resultbtn result-button"
                     type="button"
-                    value="Вычислить"
+                    value="Рассчитать"
                     id="button"
                   />
                   <div class="results">
+                    <div
+                      style="border-top: 3pt #e89f09 solid; margin-bottom: 6pt"
+                    ></div>
                     <div class="main-result">
                       <p class="calc-caption">
                         Необходимое количество калорий в день:
@@ -573,6 +590,221 @@
               <div class="fusion-clearfix"></div>
             </div>
           </div>
+          <div class="calc-list__border"></div>
+          <div class="calc-list__item calc-list__item-5" id="calc-5">
+            <div class="calc-list__title">
+              <h3>Идеальный вес тела</h3>
+            </div>
+            <div class="calc-list__text">
+              <h3>
+                Данный калькулятор рассчитывает идеальный вес тела, как для
+                женщин, так и для мужчин.Это идеальный вес с физиологической
+                точки зрения, учитывающий ваш рост, возраст и окружность
+                запястья.
+              </h3>
+            </div>
+            <div class="calc-list__body">
+              <div class="variable">
+                <span>Пол:</span>
+                <select id="pol">
+                  <option value="" selected=""></option>
+                  <option value="МУЖ">МУЖ</option>
+                  <option value="ЖЕН">ЖЕН</option>
+                </select>
+              </div>
+              <div class="variable">
+                <span>Возраст:</span>
+                <input type="number" id="vozrast" />
+              </div>
+              <div class="variable">
+                <span>Рост (см):</span>
+                <input type="number" id="rost" />
+              </div>
+              <div class="variable">
+                <span>Окружность запястья (см):</span>
+                <input type="number" id="zap" />
+              </div>
+              <button class="result-button calc5" id="calc5" onclick="rezalt()">
+                Рассчитать
+              </button>
+
+              <div class="results">
+                <div
+                  style="border-top: 3pt #e89f09 solid; margin-bottom: 6pt"
+                ></div>
+                <div id="rez3">Ваш идеальный вес - 78.3 кг</div>
+              </div>
+              <script type="text/javascript">
+                function rezalt() {
+                  if (
+                    document.getElementById("pol").value == "" ||
+                    document.getElementById("zap").value == "" ||
+                    document.getElementById("rost").value == "" ||
+                    document.getElementById("vozrast").value == ""
+                  ) {
+                    $("#param").fadeIn("slow");
+                    setTimeout(function () {
+                      $("#param").fadeOut("slow");
+                    }, 2500);
+                    return;
+                  }
+
+                  if (
+                    document.getElementById("zap").value < 10 ||
+                    document.getElementById("zap").value > 30
+                  ) {
+                    $("#param_zap").fadeIn("slow");
+                    setTimeout(function () {
+                      $("#param_zap").fadeOut("slow");
+                    }, 2500);
+                    return;
+                  }
+
+                  var vozrast = document.getElementById("vozrast").value,
+                    vozrast = parseFloat(vozrast.replace(",", "."));
+                  var rost = document.getElementById("rost").value,
+                    rost = parseFloat(rost.replace(",", "."));
+                  var zap = document.getElementById("zap").value,
+                    zap = parseFloat(zap.replace(",", "."));
+                  var pol = document.getElementById("pol").value;
+                  rost2 = rost / 100;
+                  rost3 = (rost / 100) * 77;
+                  rost4 = (rost / 100) * 66;
+                  if (pol == "ЖЕН") {
+                    var ves =
+                      Math.round(
+                        (rost -
+                          rost3 +
+                          rost2 * rost2 * rost2 * rost2 * rost2 +
+                          vozrast / 8 -
+                          (15 - zap) * 2.5) *
+                          10
+                      ) / 10;
+                  }
+                  if (pol == "МУЖ") {
+                    var ves =
+                      Math.round(
+                        (rost -
+                          rost4 +
+                          rost2 * rost2 * rost2 * rost2 * rost2 +
+                          vozrast / 8 -
+                          (18.5 - zap) * 2.5) *
+                          10
+                      ) / 10;
+                  }
+                  document.getElementById("rez3").innerHTML =
+                    "Ваш идеальный вес - " + ves;
+                }
+              </script>
+            </div>
+          </div>
+          <div class="calc-list__border"></div>
+          <div class="calc-list__item calc-list__item-6" id="calc-6">
+            <div class="calc-list__title">
+              <h3>Количество протеина</h3>
+            </div>
+            <div class="calc-list__text">
+              <h3>
+                Данный калькулятор рассчитывает необходимое количество
+                употребления порошкового протеина, учитывая ваш пол, вес,
+                процент белка в протеине и количество тренировок в неделю
+              </h3>
+            </div>
+            <div class="calc-list__body">
+              <div class="variable">
+                <span>Пол:</span>
+                <select id="pol1">
+                  <option value="" selected=""></option>
+                  <option value="МУЖ">МУЖ</option>
+                  <option value="ЖЕН">ЖЕН</option>
+                </select>
+              </div>
+              <div class="variable">
+                <span>Вес тела (кг):</span>
+                <input type="number" id="ves1" />
+              </div>
+              <div class="variable">
+                <span>% белка в протеине:</span>
+                <input type="number" id="prbel1" />
+              </div>
+              <div class="variable">
+                <span>Количество тренировок в неделю:</span>
+                <select id="trenirovok1">
+                  <option value="" selected=""></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
+              </div>
+              <button class="result-button calc6" id="calc6" onclick="gotovo()">
+                Рассчитать
+              </button>
+
+              <div class="results">
+                <div id="rez" style="font-weight: bold">
+                  <div
+                    style="border-top: 3pt #e89f09 solid; margin-bottom: 6pt"
+                  ></div>
+                  Вам нужно принимать<b> 63</b> гр. протеина в сутки<br />(вес
+                  порошка, а не коктейля)<br /><br />
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+              function gotovo() {
+                if (
+                  document.getElementById("ves1").value == "" ||
+                  document.getElementById("pol1").value == "" ||
+                  document.getElementById("prbel1").value == "" ||
+                  document.getElementById("trenirovok1").value == ""
+                ) {
+                  $(".param").fadeIn("slow");
+                  setTimeout(function () {
+                    $(".param").fadeOut("slow");
+                  }, 2500);
+                  return;
+                }
+
+                var ves2 = document.getElementById("ves1").value;
+                var pol2 = document.getElementById("pol1").value;
+                var prbel2 = document.getElementById("prbel1").value;
+                var trenirovok2 = document.getElementById("trenirovok1").value;
+                if (trenirovok2 == 1) {
+                  trenirovok2 = 0.9;
+                }
+                if (trenirovok2 == 2) {
+                  trenirovok2 = 0.95;
+                }
+                if (trenirovok2 == 3) {
+                  trenirovok2 = 1;
+                }
+                if (trenirovok2 == 4) {
+                  trenirovok2 = 1.05;
+                }
+                if (trenirovok2 == 5) {
+                  trenirovok2 = 1.1;
+                }
+                if (trenirovok2 == 6) {
+                  trenirovok2 = 1.15;
+                }
+                if (trenirovok2 == 7) {
+                  trenirovok2 = 1.2;
+                }
+                var rezalt = Math.ceil(((ves2 * 100) / prbel2) * trenirovok2);
+                if (pol2 == "ЖЕН") {
+                  rezalt = Math.ceil(rezalt - rezalt / 6);
+                }
+                document.getElementById("rez").innerHTML =
+                  "<div style='border-top:3pt #E89F09 solid; margin-bottom:6pt'></div>Вам нужно принимать<b> " +
+                  rezalt +
+                  "</b> гр. протеина в сутки<br>(вес порошка, а не коктейля)<br> ";
+              }
+            </script>
+          </div>
         </div>
       </div>
     </section>
@@ -609,9 +841,9 @@
         </li>
       </ul>
 
-      <audio id="sound-link" preload="auto">
+      <!-- <audio id="sound-link" preload="auto">
         <source src="audio/12.mp3" type="audio/mpeg" />
-      </audio>
+      </audio> -->
 
       <script src="js/jquery-3.6.0.min.js"></script>
       <script src="js/script.js"></script>

@@ -21,8 +21,8 @@
         <a href="main.html#section-start">С чего начать?</a>
       </li>
       <li class="nav__item"><a href="exercises.html">База упражнений</a></li>
-      <li class="nav__item"><a href="pitanie.html">Питание</a></li>
-      <li class="nav__item"><a href="#portfolio">Программы</a></li>
+      <li class="nav__item"><a href="#">Питание</a></li>
+      <li class="nav__item"><a href="#">Программы</a></li>
       <li class="nav__item"><a href="calcs.html">Калькуляторы</a></li>
       <li class="nav__item">
         <a href="calories.html">Таблица калорийности</a>
@@ -33,113 +33,124 @@
 <!-- !header -->
     <!-- main -->
     <section class="section-outer section-main">
+      <a href="#section-calories"
+        ><div class="arrow one">
+          <img src="img/white-arrow.png" alt="" /></div
+      ></a>
+      <a href="#section-calories"
+        ><div class="arrow two">
+          <img src="img/white-arrow.png" alt="" /></div
+      ></a>
       <div class="section-inner section-main__container">
         <div class="section-main__title">
-          <h3>Таблица калорийности</h3>
+          <h2>Таблица калорийности</h2>
         </div>
       </div>
     </section>
     <!-- !main -->
-    <section class="section-outer section-calculator">
-      <div class="section-inner section-calculator__container">
+    <section class="section-outer section-calories" id="section-calories">
+      <div class="section-inner section-calories__container">
+        <div class="calories__title">
+          <h3>Категории</h3>
+        </div>
         <div class="calories__links">
           <div class="links__item">
-            <a href="#cal-2">
+            <a href="#cal-2" title="Мясо">
               <img src="img/calories/cal-1.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-3">
+            <a href="#cal-3" title="Птица">
               <img src="img/calories/cal-2.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-4">
+            <a href="#cal-4" title="Колбасные изделия">
               <img src="img/calories/cal-3.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-5">
+            <a href="#cal-5" title="Рыба">
               <img src="img/calories/cal-4.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-6">
+            <a href="#cal-6" title="Икра">
               <img src="img/calories/cal-5.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-7">
+            <a href="#cal-7" title="Морепродукты">
               <img src="img/calories/cal-6.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-8">
+            <a href="#cal-8" title="Грибы">
               <img src="img/calories/cal-7.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-9">
+            <a href="#cal-9" title="Яйца">
               <img src="img/calories/cal-8.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-10">
+            <a href="#cal-10" title="Масла">
               <img src="img/calories/cal-9.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-11">
+            <a href="#cal-11" title="Молочные продукты">
               <img src="img/calories/cal-10.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-12">
+            <a href="#cal-12" title="Крупы">
               <img src="img/calories/cal-11.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-13">
+            <a href="#cal-13" title="Хлебобулочные изделия">
               <img src="img/calories/cal-12.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-14">
+            <a href="#cal-14" title="Овощи">
               <img src="img/calories/cal-13.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-15">
+            <a href="#cal-15" title="Фрукты">
               <img src="img/calories/cal-14.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-16">
+            <a href="#cal-16" title="Зелень">
               <img src="img/calories/cal-15.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-17">
+            <a href="#cal-17" title="Ягоды">
               <img src="img/calories/cal-16.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-18">
+            <a href="#cal-18" title="Орехи">
               <img src="img/calories/cal-17.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-19">
+            <a href="#cal-19" title="Сухофрукты">
               <img src="img/calories/cal-18.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-20">
+            <a href="#cal-20" title="Кондитерские изделия">
               <img src="img/calories/cal-19.png" alt="" />
             </a>
           </div>
           <div class="links__item">
-            <a href="#cal-22">
+            <a href="#cal-22" title="Напитки">
               <img src="img/calories/cal-20.png" alt="" />
             </a>
           </div>
@@ -2268,9 +2279,9 @@
         </li>
       </ul>
 
-      <audio id="sound-link" preload="auto">
+      <!-- <audio id="sound-link" preload="auto">
         <source src="audio/12.mp3" type="audio/mpeg" />
-      </audio>
+      </audio> -->
 
       <script src="js/jquery-3.6.0.min.js"></script>
       <script src="js/script.js"></script>
