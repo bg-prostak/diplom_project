@@ -19,9 +19,7 @@
     min-height: 800px;
     padding-top: 200px;
     align-items: center;
-    &__container{
 
-    }
     &__title{
         font-size: 80px;
         font-weight: 700;
@@ -43,7 +41,8 @@
     color:$black-color;
     .section-inner{
         background-color: #fff;
-        padding-top:  50px;
+        padding:  50px 0;
+
     }
     .calories__title{
         text-align: center;

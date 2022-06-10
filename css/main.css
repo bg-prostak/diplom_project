@@ -1047,6 +1047,14 @@ footer.site-footer .social-icons a.dribbble:hover {
   display: -ms-flexbox;
   display: flex;
   gap: 50px;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+.section-trens .section-trens__container .section-trens__list .list__item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
 }
 .section-trens .section-trens__container .section-trens__list .list__item .item__image {
   display: -webkit-box;
@@ -1065,8 +1073,104 @@ footer.site-footer .social-icons a.dribbble:hover {
 .section-trens .section-trens__container .section-trens__list .list__item .item__title {
   font-size: 30px;
   margin-bottom: 20px;
+  text-align: center;
 }
 .section-trens .section-trens__container .section-trens__list .list__item .item__text {
+  font-size: 20px;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------relax*/
+.section-relax {
+  background-color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: #000000;
+}
+.section-relax .section-relax__container {
+  max-width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.section-relax .section-relax__container .section-relax__title {
+  margin-bottom: 50px;
+}
+.section-relax .section-relax__container .section-relax__title h2 {
+  font-size: 60px;
+}
+.section-relax .section-relax__container .section-relax__text {
+  font-size: 30px;
+  margin-bottom: 50px;
+  max-width: 70%;
+}
+.section-relax .section-relax__container .section-relax__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+.section-relax .section-relax__container .section-relax__list .list__item {
+  border: 5px solid #d81c2b;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.section-relax .section-relax__container .section-relax__list .list__item .item__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.section-relax .section-relax__container .section-relax__list .list__item .item__image img {
+  width: auto;
+  height: auto;
+  max-height: 150px;
+}
+.section-relax .section-relax__container .section-relax__list .list__item .item__title-and-text .item__title {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.section-relax .section-relax__container .section-relax__list .list__item .item__title-and-text .item__text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
   font-size: 20px;
 }
 

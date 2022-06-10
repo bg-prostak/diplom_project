@@ -5,6 +5,7 @@
 @import "variables.scss";
 @import "common.scss";
 @import "footer.scss";
+@import "arrow.scss";
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------main */
 .section-header{z-index: 1;}
@@ -36,21 +37,7 @@
         }
         margin-bottom: 80px;
     }
-    .section-main__button{
-        
-        a{
-            transition: all 0.5s;
-            text-align: center;
-            padding: 20px;
-            background-color: $white-color;
-            color: $black-text-color;
-            border-radius: 10px;
-            font-size: 50px;
-            font-weight: 700;
-            text-transform: uppercase;  
-        }
-          
-    }
+
 }
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------exercices */
@@ -165,9 +152,7 @@
                         height: auto;
                         }
                     }
-                    .item__text{
 
-                    }
                     .item__title{
                             display: flex;
                             justify-content: center;
@@ -252,9 +237,7 @@
         h3{
             font-size: 30px;
         }
-        p{
 
-        } 
         span{
                 font-weight: bold;
                 margin-bottom: 10px;

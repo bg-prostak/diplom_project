@@ -790,7 +790,7 @@ footer.site-footer .social-icons a.dribbble:hover {
 }
 .section-calories .section-inner {
   background-color: #fff;
-  padding-top: 50px;
+  padding: 50px 0;
 }
 .section-calories .calories__title {
   text-align: center;

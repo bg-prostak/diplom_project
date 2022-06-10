@@ -786,6 +786,7 @@ footer.site-footer .social-icons a.dribbble:hover {
       flex-basis: 30%;
 }
 .section-main__buttons-list .section-main__button a {
+  font-size: 20px;
   display: block;
   text-align: center;
   padding: 20px;
