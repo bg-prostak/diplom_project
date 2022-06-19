@@ -1,0 +1,137 @@
+/* ------------------------------------------------------------------------------------------Import */
+@import "normalize.scss";
+@import "null.scss";
+@import "header.scss";
+@import "variables.scss";
+@import "common.scss";
+@import "footer.scss";
+@import "arrow.scss";
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------main */
+.section-main{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/img/trens/trens-bg.jpg) center no-repeat;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 200px;
+    display: flex;
+    height: 100vh;
+    min-height: 800px;
+    padding-top: 200px;
+    align-items: center;
+
+    &__title{
+        font-size: 80px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    &__text{
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    
+}
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------start */
+.section-start{
+    background-color:$white-color; 
+    
+    display: flex;
+    
+    padding-top: 100px;
+   
+
+    &__title{
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 1.2;
+        padding-bottom: 1rem;
+        border-bottom: 1rem solid $red-color;
+        max-width: 52rem; 
+        color:$black-text-color;
+        margin-bottom: 30px;
+    }
+    &__text{
+        line-height: 1.6;
+        font-size: 30px;
+        margin-bottom: 50px;
+        color:$black-text-color;
+        font-weight: 400;
+        h4{
+            margin: 10px 0 20px;
+            font-size: 3rem;  
+        }
+
+    }
+    .steps{
+        margin-top: 30px;
+        .steps__numbers{
+            display: flex;
+            justify-content: center;
+            gap: 1vw;
+            .numbers__item{
+                background-color: $red-color;
+                color:$white-color;
+                border-radius: 5px;
+                width: 17%;
+                padding: 5px;
+                font-weight: 700;
+            }
+        }
+        .steps__contents{
+            .contents__item{
+                padding: 50px 0;
+                h3{text-align: center;}
+                display: none;
+                img{width: 80%;margin: 0 auto; display: block;;}
+                p{display: inline;}
+                a{
+                    text-decoration: underline;
+                    font-weight: 600;
+                    color: $red-text-color;
+                    
+                }
+                &.active{
+                    display:block
+                }
+            }
+        }
+    }
+    
+}
+/* ------------------------------------------------------------------------------------------ */
+// 
+.button-30 {
+    align-items: center;
+    appearance: none;
+
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: "JetBrains Mono",monospace;
+    min-height: 48px;
+    transition: box-shadow .15s,transform .15s;
+    font-size: 18px;
+  }
+  
+  .button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  .button-30.active {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #720909 0 -4px 0 inset;
+    transform: translateY(-2px);
+  }
