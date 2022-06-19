@@ -9,8 +9,8 @@
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------main */
 .section-main{
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/calories/main-bg.jpg) center no-repeat;
-
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://img5.goodfon.com/original/1920x1080/0/7b/osen-urozhai-tykva-natiurmort-ovoshchi-autumn-still-life-p-1.jpg) center no-repeat;
+    position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 200px;
@@ -33,6 +33,7 @@
     
 }
 /* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------calories */
 .section-calories{
     background-image: url(../img/calories/cal-bg.png);
     background-size: 30%;
@@ -138,6 +139,48 @@
     }
 
     }
+    /* ------------------------------------------------------------------------------------------*/
+    /* ------------------------------------------------------------------------------------------scroll-button*/
+    // 
+    #button-scroll {
+        display: inline-block;
+        background-color: $red-color;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        transition: background-color .3s, 
+          opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+      
+        &::after {
+            content: "\f077";
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 2em;
+            line-height: 50px;
+            color: #fff;
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: #333;
+        }
+        &:active {
+            background-color: #555;
+        }
+        &.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+      
+    // 
 
 
       

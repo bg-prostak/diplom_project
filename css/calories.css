@@ -8,6 +8,8 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 @import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
 html {
   line-height: 1.15;
   /* 1 */
@@ -494,6 +496,46 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
 }
 
+body {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-inner {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.section-outer {
+  padding: 0 15px;
+}
+
+.more-button {
+  background-color: #d81c2b;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
 .section-header {
   position: absolute;
   height: 100px;
@@ -520,13 +562,13 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
   display: block;
 }
-.section-header .header__nav {
+.section-header .header__nav .header__nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.section-header .header__nav .nav__item {
-  margin-right: 35px;
+.section-header .header__nav .header__nav-list .nav__item {
+  margin-right: 2vw;
   font-weight: 600;
   font-family: "Montserrat";
   font-size: 16px;
@@ -534,12 +576,130 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   color: #ffffff;
 }
+.section-header .header__nav .burger {
+  width: 50px;
+  height: 50px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 330ms ease-out;
+  transition: -webkit-transform 330ms ease-out;
+  transition: transform 330ms ease-out;
+  transition: transform 330ms ease-out, -webkit-transform 330ms ease-out;
+}
+.section-header .header__nav .burger .line {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height: 6px;
+}
+.section-header .header__nav .burger .line.half {
+  width: 50%;
+}
+.section-header .header__nav .burger .line.start {
+  -webkit-transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+.section-header .header__nav .burger .line.end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.section-header .header__nav .burger.open {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.section-header .header__nav .burger.open .line.start {
+  -webkit-transform: rotate(-90deg) translateX(3px);
+          transform: rotate(-90deg) translateX(3px);
+}
+.section-header .header__nav .burger.open .line.end {
+  -webkit-transform: rotate(-90deg) translateX(-3px);
+          transform: rotate(-90deg) translateX(-3px);
+}
+
+@media (max-width: 992px) {
+  .section-header .header__nav .header__nav-list {
+    display: none;
+  }
+  .section-header .header__nav .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section-header .header__logo {
+    padding-top: 10px;
+  }
+  .section-header .header__logo .logo {
+    height: 25vh;
+  }
+}
+.section-header.open {
+  position: fixed;
+  background-color: rgba(8, 8, 8, 0.9);
+  height: 100%;
+  overflow: auto;
+  padding-top: 25px;
+}
+.section-header.open .section-header__container {
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.section-header.open .header__logo {
+  display: none;
+}
+.section-header.open .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.section-header.open .header__nav .header__nav-list {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 
 body {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
   color: #ffffff;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .wrapper {
@@ -557,6 +717,10 @@ body {
 .section-inner {
   max-width: 1170px;
   margin: 0 auto;
+}
+
+.section-outer {
+  padding: 0 15px;
 }
 
 .more-button {
@@ -754,8 +918,9 @@ footer.site-footer .social-icons a.dribbble:hover {
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------main */
 .section-main {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/calories/main-bg.jpg) center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/calories/main-bg.jpg) center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(https://img5.goodfon.com/original/1920x1080/0/7b/osen-urozhai-tykva-natiurmort-ovoshchi-autumn-still-life-p-1.jpg) center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://img5.goodfon.com/original/1920x1080/0/7b/osen-urozhai-tykva-natiurmort-ovoshchi-autumn-still-life-p-1.jpg) center no-repeat;
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 200px;
@@ -781,6 +946,7 @@ footer.site-footer .social-icons a.dribbble:hover {
 }
 
 /* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------calories */
 .section-calories {
   background-image: url(../img/calories/cal-bg.png);
   background-size: 30%;
@@ -882,4 +1048,43 @@ footer.site-footer .social-icons a.dribbble:hover {
 }
 .section-calories .calories__table tr td:not(:first-child) {
   width: 15%;
+}
+
+/* ------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------------scroll-button*/
+#button-scroll {
+  display: inline-block;
+  background-color: #d81c2b;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  -webkit-transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button-scroll::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button-scroll:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button-scroll:active {
+  background-color: #555;
+}
+#button-scroll.show {
+  opacity: 1;
+  visibility: visible;
 }

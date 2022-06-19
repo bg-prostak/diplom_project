@@ -118,7 +118,35 @@ document.addEventListener('keydown', function(e){
 // 
 
 
-   var soundLink = $("#sound-link")[0];
-               $(".music1 a").mouseenter(function() {
-                   soundLink.play();
-               });
+var soundLink = $("#sound-link")[0];
+            $(".music1 a").mouseenter(function() {
+                soundLink.play();
+             });
+
+
+// 
+/* ------------------------------------------------------------------------------------------GO-TO-TOP button */
+var btn = $('#button-scroll');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 1200) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+/* ------------------------------------------------------------------------------------------burger button */
+
+$(document).ready(function(){
+    $('.burger').click(function(event){
+        $('.burger,.section-header').toggleClass('open');
+        $('body').toggleClass('lock');
+    });
+});
+document.addEventListener('keydown', function(e){
+    if(e.which ===27){
+        $('.burger,.section-header').removeClass('open');
+        $('body').removeClass('lock');
+    }
+})

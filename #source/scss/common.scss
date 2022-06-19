@@ -8,6 +8,9 @@ body{
     font-weight: 500;
     color:$white-text-color;   
 }
+body.lock{
+    overflow: hidden;
+};
 .wrapper {
     overflow: hidden;
     min-height: 100vh;
@@ -18,6 +21,9 @@ body{
     max-width: 1170px;
     margin: 0 auto;
 }
+.section-outer{
+    padding: 0 15px;
+}
 .more-button{
     background-color: $red-color;
     padding: 15px;
@@ -26,3 +32,30 @@ body{
     color:$white-text-color;
 }
 // !common styles
+// MIXINS
+@mixin size-xs(){
+    @media ( max-width: $size-xs){
+        @content;
+    }
+}
+@mixin size-sm(){
+    @media ( max-width: $size-sm){
+        @content;
+    }
+}
+@mixin size-mg(){
+    @media ( max-width: $size-mg){
+        @content;
+    }
+}
+@mixin size-lg(){
+    @media ( max-width: $size-lg){
+        @content;
+    }
+}
+@mixin size-xl(){
+    @media ( max-width: $size-xl){
+        @content;
+    }
+}
+// !MIXINS
